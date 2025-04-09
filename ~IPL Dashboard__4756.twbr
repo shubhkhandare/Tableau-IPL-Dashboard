@@ -1,0 +1,2903 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <_.fcp.IndividualControlFormatting.true...IndividualControlFormatting />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+    <ZoneFriendlyName />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+        <calculation class='tableau' formula='2024' />
+        <members>
+          <member value='2007' />
+          <member value='2009' />
+          <member value='2011' />
+          <member value='2012' />
+          <member value='2013' />
+          <member value='2014' />
+          <member value='2015' />
+          <member value='2016' />
+          <member value='2017' />
+          <member value='2018' />
+          <member value='2019' />
+          <member value='2021' />
+          <member value='2022' />
+          <member value='2023' />
+          <member value='2024' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='matches' inline='true' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='matches' name='textscan.1wbt3np0v5h7y71f4xdpr1qumww5'>
+            <connection class='textscan' directory='C:/Users/Dell/Downloads' filename='matches.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1wbt3np0v5h7y71f4xdpr1qumww5' name='matches.csv' table='[matches#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='date' date-parse-format='yyyy|#|#|yyyy/MM' name='season' ordinal='1' />
+            <column datatype='string' name='city' ordinal='2' />
+            <column datatype='date' name='date' ordinal='3' />
+            <column datatype='string' name='match_type' ordinal='4' />
+            <column datatype='string' name='player_of_match' ordinal='5' />
+            <column datatype='string' name='venue' ordinal='6' />
+            <column datatype='string' name='team1' ordinal='7' />
+            <column datatype='string' name='team2' ordinal='8' />
+            <column datatype='string' name='toss_winner' ordinal='9' />
+            <column datatype='string' name='toss_decision' ordinal='10' />
+            <column datatype='string' name='winner' ordinal='11' />
+            <column datatype='string' name='result' ordinal='12' />
+            <column datatype='integer' name='result_margin' ordinal='13' />
+            <column datatype='integer' name='target_runs' ordinal='14' />
+            <column datatype='real' name='target_overs' ordinal='15' />
+            <column datatype='string' name='super_over' ordinal='16' />
+            <column datatype='string' name='method' ordinal='17' />
+            <column datatype='string' name='umpire1' ordinal='18' />
+            <column datatype='string' name='umpire2' ordinal='19' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[season]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>season</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>match_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[match_type]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>match_type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_of_match</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_of_match]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>player_of_match</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>venue</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[venue]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>venue</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team1]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>team1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team2]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>team2</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>toss_winner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[toss_winner]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>toss_winner</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>toss_decision</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[toss_decision]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>toss_decision</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>winner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[winner]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>winner</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>result</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[result]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>result</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>result_margin</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[result_margin]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>result_margin</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>target_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[target_runs]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>target_runs</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>target_overs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[target_overs]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>target_overs</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>super_over</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[super_over]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>super_over</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[method]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>method</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>umpire1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[umpire1]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>umpire1</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>umpire2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[umpire2]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>umpire2</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' default-format='p0.00%' name='[Calculation2]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([winner]) / TOTAL(COUNT([winner]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='most toss winner' datatype='string' name='[Calculation_322007439378124800]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [toss_winner]&#13;&#10;END' />
+        <aliases>
+          <alias key='&quot;Chennai Super Kings&quot;' value='CSK' />
+          <alias key='&quot;Delhi Capitals&quot;' value='DC' />
+          <alias key='&quot;Gujarat Titans&quot;' value='GT' />
+          <alias key='&quot;Kolkata Knight Riders&quot;' value='KKR' />
+          <alias key='&quot;Lucknow Super Giants&quot;' value='LSG' />
+          <alias key='&quot;Mumbai Indians&quot;' value='MI' />
+          <alias key='&quot;Punjab Kings&quot;' value='PK' />
+          <alias key='&quot;Rajasthan Royals&quot;' value='RR' />
+          <alias key='&quot;Royal Challengers Bengaluru&quot;' value='RCB' />
+          <alias key='&quot;Sunrisers Hyderabad&quot;' value='SRH' />
+        </aliases>
+      </column>
+      <column caption='Run Margin' datatype='integer' name='[Calculation_360006561010102272]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] AND [result_margin] &gt; 0 THEN [result_margin]&#13;&#10;end' />
+      </column>
+      <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='YEAR([season])' />
+      </column>
+      <column caption='COUNT([Id])' datatype='integer' name='[Calculation_404761081844097027]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='COUNT([id])' />
+      </column>
+      <column caption='Total  Matches' datatype='integer' name='[Calculation_404761081846767622]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [id]&#13;&#10;END' />
+      </column>
+      <column aggregation='CountD' caption='Team Participated' datatype='string' default-role='measure' default-type='quantitative' name='[Calculation_404761081858416648]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [team1]&#13;&#10;END' />
+      </column>
+      <column caption='Winner of Season' datatype='string' name='[Calculation_404761081859461129]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [winner]&#13;&#10;END' />
+      </column>
+      <column caption='Hosted city' datatype='string' name='[Calculation_404761081876127757]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [city] END' />
+      </column>
+      <column caption='max date ' datatype='date' name='[Calculation_525795321193398273]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{ FIXED [Calculation_404761081842511874] : MAX([date])}' />
+      </column>
+      <column caption='pionts1' datatype='integer' name='[Calculation_525795321225416708]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([winner])*2' />
+      </column>
+      <column caption='Calculation1' datatype='real' name='[Calculation_525795321226006533]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='' />
+      </column>
+      <column caption='loss' datatype='integer' name='[Calculation_525795321226260486]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [team1] != [winner] &#13;&#10;THEN&#13;&#10;    1&#13;&#10;END' />
+      </column>
+      <column caption='cnt loss' datatype='integer' name='[Calculation_525795321226977287]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([Calculation_525795321226260486])' />
+      </column>
+      <column caption='Toss based WINNER Select Year ' datatype='string' name='[Calculation_595038166449188869]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Calculation_404761081842511874] THEN [winner]&#13;&#10;END' />
+      </column>
+      <column caption='Toss based Discision Select Year' datatype='string' name='[Calculation_595038166450294792]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN &#13;&#10;    [toss_decision]&#13;&#10;END' />
+      </column>
+      <column caption='Season Winner max' datatype='string' name='[Calculation_595038166460497933]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1]&#13;&#10;AND [date] = {FIXED[Calculation_404761081842511874]: MAX([date])}&#13;&#10;THEN [winner]&#13;&#10;END' />
+      </column>
+      <column caption='MOST WIN' datatype='string' name='[Calculation_595038166486904846]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [winner]&#13;&#10;END' />
+        <aliases>
+          <alias key='&quot;Chennai Super Kings&quot;' value='CSK' />
+          <alias key='&quot;Delhi Capitals&quot;' value='DC' />
+          <alias key='&quot;Gujarat Titans&quot;' value='GT' />
+          <alias key='&quot;Kolkata Knight Riders&quot;' value='KKR' />
+          <alias key='&quot;Lucknow Super Giants&quot;' value='LSG' />
+          <alias key='&quot;Mumbai Indians&quot;' value='MI' />
+          <alias key='&quot;Punjab Kings&quot;' value='PK' />
+          <alias key='&quot;Rajasthan Royals&quot;' value='RR' />
+          <alias key='&quot;Royal Challengers Bengaluru&quot;' value='RCB' />
+          <alias key='&quot;Sunrisers Hyderabad&quot;' value='SRH' />
+        </aliases>
+      </column>
+      <column caption='matches.csv' datatype='table' name='[__tableau_internal_object_id__].[matches.csv_66592355C58645F8AE2289BDCC403420]' role='measure' type='quantitative' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Match Type' datatype='string' name='[match_type]' role='dimension' type='nominal' />
+      <column caption='Method' datatype='string' name='[method]' role='dimension' type='nominal' />
+      <column caption='Player Of Match' datatype='string' name='[player_of_match]' role='dimension' type='nominal' />
+      <column caption='Result' datatype='string' name='[result]' role='dimension' type='nominal' />
+      <column caption='Result Margin' datatype='integer' name='[result_margin]' role='measure' type='quantitative' />
+      <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+      <column caption='Super Over' datatype='string' name='[super_over]' role='dimension' type='nominal' />
+      <column caption='Target Overs' datatype='real' name='[target_overs]' role='measure' type='quantitative' />
+      <column caption='Target Runs' datatype='integer' name='[target_runs]' role='measure' type='quantitative' />
+      <column caption='Team1' datatype='string' name='[team1]' role='dimension' type='nominal' />
+      <column caption='Team2' datatype='string' name='[team2]' role='dimension' type='nominal' />
+      <column caption='Toss Decision' datatype='string' name='[toss_decision]' role='dimension' type='nominal' />
+      <column caption='Toss Winner' datatype='string' name='[toss_winner]' role='dimension' type='nominal' />
+      <column caption='Umpire1' datatype='string' name='[umpire1]' role='dimension' type='nominal' />
+      <column caption='Umpire2' datatype='string' name='[umpire2]' role='dimension' type='nominal' />
+      <column caption='Venue' datatype='string' name='[venue]' role='dimension' type='nominal' />
+      <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_322007439378124800]' derivation='None' name='[none:Calculation_322007439378124800:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_404761081876127757]' derivation='None' name='[none:Calculation_404761081876127757:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_595038166450294792]' derivation='None' name='[none:Calculation_595038166450294792:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_595038166486904846]' derivation='None' name='[none:Calculation_595038166486904846:nk]' pivot='key' type='nominal' />
+      <column-instance column='[team2]' derivation='None' name='[none:team2:nk]' pivot='key' type='nominal' />
+      <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Dell/AppData/Local/Temp/TableauTemp/#TableauTemp_0yamegt1mwpanu12guu7e0i1o8xa.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/07/2025 05:19:10 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>matches.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1095</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>season</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[season]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>season</remote-alias>
+              <ordinal>1</ordinal>
+              <family>matches.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>city</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[city]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>city</remote-alias>
+              <ordinal>2</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>matches.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>800</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>match_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[match_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>match_type</remote-alias>
+              <ordinal>4</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_of_match</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_of_match]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>player_of_match</remote-alias>
+              <ordinal>5</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>286</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>venue</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[venue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>venue</remote-alias>
+              <ordinal>6</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>58</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>team1</remote-alias>
+              <ordinal>7</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>team2</remote-alias>
+              <ordinal>8</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>toss_winner</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[toss_winner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>toss_winner</remote-alias>
+              <ordinal>9</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>toss_decision</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[toss_decision]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>toss_decision</remote-alias>
+              <ordinal>10</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>winner</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[winner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>winner</remote-alias>
+              <ordinal>11</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>result</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[result]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>result</remote-alias>
+              <ordinal>12</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>result_margin</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[result_margin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>result_margin</remote-alias>
+              <ordinal>13</ordinal>
+              <family>matches.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>target_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[target_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>target_runs</remote-alias>
+              <ordinal>14</ordinal>
+              <family>matches.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>169</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>target_overs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[target_overs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>target_overs</remote-alias>
+              <ordinal>15</ordinal>
+              <family>matches.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>super_over</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[super_over]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>super_over</remote-alias>
+              <ordinal>16</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>method</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[method]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>method</remote-alias>
+              <ordinal>17</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>umpire1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[umpire1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>umpire1</remote-alias>
+              <ordinal>18</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>umpire2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[umpire2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>umpire2</remote-alias>
+              <ordinal>19</ordinal>
+              <family>matches.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>61</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[matches.csv_66592355C58645F8AE2289BDCC403420]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.948661' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.0513393' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:team2:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gujarat Lions&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Punjab Kings&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Lucknow Super Giants&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gujarat Titans&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Deccan Chargers&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Royal Challengers Bangalore&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Kings XI Punjab&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Rising Pune Supergiant&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Royal Challengers Bengaluru&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Kochi Tuskers Kerala&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Delhi Capitals&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Rising Pune Supergiants&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Pune Warriors&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Delhi Daredevils&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:winner:nk]' type='palette'>
+            <map to='#2a5783'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#376491'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Delhi Capitals&quot;</bucket>
+            </map>
+            <map to='#80b0d5'>
+              <bucket>&quot;Gujarat Titans&quot;</bucket>
+            </map>
+            <map to='#b9ddf1'>
+              <bucket>&quot;Lucknow Super Giants&quot;</bucket>
+            </map>
+            <map to='#c8133b'>
+              <bucket>&quot;Royal Challengers Bengaluru&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;Punjab Kings&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_595038166450294792:nk]' palette='color_blind_10_0' type='palette'>
+            <map to='#073e92'>
+              <bucket>&quot;bat&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#7c878d'>
+              <bucket>&quot;field&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_404761081876127757:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Dharamsala&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Navi Mumbai&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Mumbai&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Jaipur&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Guwahati&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Chandigarh&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chennai&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Lucknow&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Kolkata&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Pune&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Delhi&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ahmedabad&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Hyderabad&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Bengaluru&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_595038166486904846:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Kings XI Punjab&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Royal Challengers Bengaluru&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Lucknow Super Giants&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Royal Challengers Bangalore&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;NA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Rising Pune Supergiants&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Delhi Capitals&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Gujarat Lions&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Punjab Kings&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Delhi Daredevils&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gujarat Titans&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_322007439378124800:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Royal Challengers Bangalore&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Lucknow Super Giants&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Punjab Kings&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Delhi Capitals&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Royal Challengers Bengaluru&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gujarat Titans&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[City].[Name]' value='%null%' />
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='id' />
+        <field-sort-custom-order field='season' />
+        <field-sort-custom-order field='city' />
+        <field-sort-custom-order field='date' />
+        <field-sort-custom-order field='match_type' />
+        <field-sort-custom-order field='player_of_match' />
+        <field-sort-custom-order field='venue' />
+        <field-sort-custom-order field='team1' />
+        <field-sort-custom-order field='team2' />
+        <field-sort-custom-order field='toss_winner' />
+        <field-sort-custom-order field='toss_decision' />
+        <field-sort-custom-order field='winner' />
+        <field-sort-custom-order field='Calculation_525795321186656256' />
+        <field-sort-custom-order field='result' />
+        <field-sort-custom-order field='result_margin' />
+        <field-sort-custom-order field='target_runs' />
+        <field-sort-custom-order field='target_overs' />
+        <field-sort-custom-order field='super_over' />
+        <field-sort-custom-order field='method' />
+        <field-sort-custom-order field='umpire1' />
+        <field-sort-custom-order field='umpire2' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+          <calculation class='tableau' formula='2024' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='matches.csv' id='matches.csv_66592355C58645F8AE2289BDCC403420'>
+            <properties context=''>
+              <relation connection='textscan.1wbt3np0v5h7y71f4xdpr1qumww5' name='matches.csv' table='[matches#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='date' date-parse-format='yyyy|#|#|yyyy/MM' name='season' ordinal='1' />
+                  <column datatype='string' name='city' ordinal='2' />
+                  <column datatype='date' name='date' ordinal='3' />
+                  <column datatype='string' name='match_type' ordinal='4' />
+                  <column datatype='string' name='player_of_match' ordinal='5' />
+                  <column datatype='string' name='venue' ordinal='6' />
+                  <column datatype='string' name='team1' ordinal='7' />
+                  <column datatype='string' name='team2' ordinal='8' />
+                  <column datatype='string' name='toss_winner' ordinal='9' />
+                  <column datatype='string' name='toss_decision' ordinal='10' />
+                  <column datatype='string' name='winner' ordinal='11' />
+                  <column datatype='string' name='result' ordinal='12' />
+                  <column datatype='integer' name='result_margin' ordinal='13' />
+                  <column datatype='integer' name='target_runs' ordinal='14' />
+                  <column datatype='real' name='target_overs' ordinal='15' />
+                  <column datatype='string' name='super_over' ordinal='16' />
+                  <column datatype='string' name='method' ordinal='17' />
+                  <column datatype='string' name='umpire1' ordinal='18' />
+                  <column datatype='string' name='umpire2' ordinal='19' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_4D1802640BDF4504B4A17E187BB1B9A9]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Toss based di' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Toss based Discision Select Year' />
+        <param name='target' value='Toss based di' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='AVG WIN Margin'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column caption='Run Margin' datatype='integer' name='[Calculation_360006561010102272]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] AND [result_margin] &gt; 0 THEN [result_margin]&#13;&#10;end' />
+            </column>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column-instance column='[Calculation_360006561010102272]' derivation='Avg' name='[avg:Calculation_360006561010102272:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column caption='Result Margin' datatype='integer' name='[result_margin]' role='measure' type='quantitative' />
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_360006561010102272]' derivation='Sum' name='[sum:Calculation_360006561010102272:qk]' pivot='key' type='quantitative' />
+            <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[sum:Calculation_360006561010102272:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[sum:Calculation_360006561010102272:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[avg:Calculation_360006561010102272:qk]' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[avg:Calculation_360006561010102272:qk]' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[avg:Calculation_360006561010102272:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d1d6e7</color>
+                <color>#b4bdde</color>
+                <color>#98a6d5</color>
+                <color>#7e90cb</color>
+                <color>#667bc2</color>
+                <color>#5068b9</color>
+                <color>#3b56af</color>
+                <color>#2845a6</color>
+                <color>#17359d</color>
+                <color>#082894</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[avg:Calculation_360006561010102272:qk]' />
+              <color column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[avg:Calculation_360006561010102272:qk]' />
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:winner:nk]' />
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[avg:Calculation_360006561010102272:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='14'>&lt;</run>
+                <run fontsize='14'>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:winner:nk]</run>
+                <run fontsize='14'>&gt;</run>
+                <run fontsize='14'>Æ&#10;</run>
+                <run fontsize='14'><![CDATA[<[federated.1pz9wcl0wsa45b161n50p0kar7gb].[avg:Calculation_360006561010102272:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{62FC510F-6A9D-4BD5-A01A-0C4203B68D90}' />
+    </worksheet>
+    <worksheet name='MOsr match WIN'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='14'>Most Match Win Team In Season</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column caption='MOST WIN' datatype='string' name='[Calculation_595038166486904846]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [winner]&#13;&#10;END' />
+              <aliases>
+                <alias key='&quot;Chennai Super Kings&quot;' value='CSK' />
+                <alias key='&quot;Delhi Capitals&quot;' value='DC' />
+                <alias key='&quot;Gujarat Titans&quot;' value='GT' />
+                <alias key='&quot;Kolkata Knight Riders&quot;' value='KKR' />
+                <alias key='&quot;Lucknow Super Giants&quot;' value='LSG' />
+                <alias key='&quot;Mumbai Indians&quot;' value='MI' />
+                <alias key='&quot;Punjab Kings&quot;' value='PK' />
+                <alias key='&quot;Rajasthan Royals&quot;' value='RR' />
+                <alias key='&quot;Royal Challengers Bengaluru&quot;' value='RCB' />
+                <alias key='&quot;Sunrisers Hyderabad&quot;' value='SRH' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_595038166486904846]' derivation='Count' name='[cnt:Calculation_595038166486904846:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_595038166486904846]' derivation='None' name='[none:Calculation_595038166486904846:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+            <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166486904846:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([Calculation_595038166486904846])' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Chennai Super Kings&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Deccan Chargers&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Delhi Capitals&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Delhi Daredevils&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Gujarat Titans&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Kings XI Punjab&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Kolkata Knight Riders&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Lucknow Super Giants&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Mumbai Indians&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Punjab Kings&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Rajasthan Royals&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Royal Challengers Bangalore&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Royal Challengers Bengaluru&quot;' />
+                  <groupfilter function='member' level='[none:Calculation_595038166486904846:nk]' member='&quot;Sunrisers Hyderabad&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166486904846:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_595038166486904846:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166486904846:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_595038166486904846:qk]' scope='cols' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='subtotal' value='0' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_595038166486904846:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d1d6e7</color>
+                <color>#b4bdde</color>
+                <color>#98a6d5</color>
+                <color>#7e90cb</color>
+                <color>#667bc2</color>
+                <color>#5068b9</color>
+                <color>#3b56af</color>
+                <color>#2845a6</color>
+                <color>#17359d</color>
+                <color>#082894</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='font-size' value='10' />
+            <format attr='text-decoration' value='none' />
+            <format attr='font-style' value='normal' />
+            <format attr='font-family' value='Tableau Medium' />
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_595038166486904846:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.0434806346893311' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166486904846:nk]</rows>
+        <cols>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_595038166486904846:qk]</cols>
+      </table>
+      <simple-id uuid='{3D574938-DA1D-4226-ACD6-91CC02301B69}' />
+    </worksheet>
+    <worksheet name='Matches By City'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='14'>Matches By Venue</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column caption='Hosted city' datatype='string' name='[Calculation_404761081876127757]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [city] END' />
+            </column>
+            <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[Calculation_404761081876127757]' derivation='Count' name='[cnt:Calculation_404761081876127757:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_404761081876127757]' derivation='None' name='[none:Calculation_404761081876127757:nk]' pivot='key' type='nominal' />
+            <column-instance column='[venue]' derivation='None' name='[none:venue:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+            <column caption='Venue' datatype='string' name='[venue]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_404761081876127757:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Ahmedabad&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Bengaluru&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Chennai&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Delhi&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Dharamsala&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Guwahati&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Hyderabad&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Jaipur&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Kolkata&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Lucknow&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Mohali&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Mumbai&quot;' />
+              <groupfilter function='member' level='[none:Calculation_404761081876127757:nk]' member='&quot;Visakhapatnam&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_404761081876127757:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[Longitude (generated)]' field-type='quantitative' max='14296360.555318432' min='6359496.5691622552' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[Latitude (generated)]' field-type='quantitative' max='4196091.6503848284' min='776257.98101491947' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081876127757:qk]' field-type='quantitative' max-size='1' min-size='0.00939098' type='quantsize' />
+            <encoding attr='color' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081876127757:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d5daeb</color>
+                <color>#bac4e6</color>
+                <color>#a1afe1</color>
+                <color>#889adc</color>
+                <color>#7187d7</color>
+                <color>#5a74d1</color>
+                <color>#4462cc</color>
+                <color>#3051c7</color>
+                <color>#1c40c2</color>
+                <color>#0a31bd</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-color' value='#ffffff' />
+            <format attr='border-style' value='solid' />
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081876127757:qk]' />
+              <lod column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_404761081876127757:nk]' />
+              <lod column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:venue:nk]' />
+              <size column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081876127757:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.0648518800735474' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[Latitude (generated)]</rows>
+        <cols>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E3F198B5-2A41-42E6-BF60-4C0206D89942}' />
+    </worksheet>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]' context='true'>
+            <groupfilter function='member' level='[yr:date:ok]' member='2016' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok] / ([federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:date:ok] / [federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:winner:nk]))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{9C86BA63-6486-41FA-88E8-934284C661E5}' />
+    </worksheet>
+    <worksheet name='Sheet 1 (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#0000ff'>Winner of Season</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]' context='true'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:date:ok]' member='2015' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2016' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-align' scope='rows' value='center' />
+            <format attr='vertical-align' scope='rows' value='bottom' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='14' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#0000ff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:winner:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{43CE1E8E-B992-48C7-9E03-943077556138}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='14'>Most Frequent Toss Winner</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column caption='most toss winner' datatype='string' name='[Calculation_322007439378124800]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [toss_winner]&#13;&#10;END' />
+              <aliases>
+                <alias key='&quot;Chennai Super Kings&quot;' value='CSK' />
+                <alias key='&quot;Delhi Capitals&quot;' value='DC' />
+                <alias key='&quot;Gujarat Titans&quot;' value='GT' />
+                <alias key='&quot;Kolkata Knight Riders&quot;' value='KKR' />
+                <alias key='&quot;Lucknow Super Giants&quot;' value='LSG' />
+                <alias key='&quot;Mumbai Indians&quot;' value='MI' />
+                <alias key='&quot;Punjab Kings&quot;' value='PK' />
+                <alias key='&quot;Rajasthan Royals&quot;' value='RR' />
+                <alias key='&quot;Royal Challengers Bengaluru&quot;' value='RCB' />
+                <alias key='&quot;Sunrisers Hyderabad&quot;' value='SRH' />
+              </aliases>
+            </column>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column-instance column='[Calculation_322007439378124800]' derivation='Count' name='[cnt:Calculation_322007439378124800:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_322007439378124800]' derivation='None' name='[none:Calculation_322007439378124800:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+            <column caption='Toss Winner' datatype='string' name='[toss_winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_322007439378124800:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Chennai Super Kings&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Delhi Capitals&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Gujarat Titans&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Kolkata Knight Riders&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Lucknow Super Giants&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Mumbai Indians&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Punjab Kings&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Rajasthan Royals&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Royal Challengers Bengaluru&quot;' />
+              <groupfilter function='member' level='[none:Calculation_322007439378124800:nk]' member='&quot;Sunrisers Hyderabad&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_322007439378124800:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' scope='rows' value='false' />
+            <encoding attr='space' class='1' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <encoding attr='space' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' field-type='quantitative' major-origin='0' major-spacing='10' max='13' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' scope='rows' value='' />
+            <format attr='display' class='1' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' data-class='subtotal' scope='rows' value='10' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' scope='rows' value='10' />
+            <format attr='font-weight' scope='rows' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d1d6e7</color>
+                <color>#b4bdde</color>
+                <color>#98a6d5</color>
+                <color>#7e90cb</color>
+                <color>#667bc2</color>
+                <color>#5068b9</color>
+                <color>#3b56af</color>
+                <color>#2845a6</color>
+                <color>#17359d</color>
+                <color>#082894</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.0434806346893311' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.68066298961639404' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.2413811683654785' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk] + [federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk])</rows>
+        <cols>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_322007439378124800:nk]</cols>
+      </table>
+      <simple-id uuid='{5F9BE48A-EA2C-4C24-82CA-638209639366}' />
+    </worksheet>
+    <worksheet name='Sheet 12'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column caption='Season Winner max' datatype='string' name='[Calculation_595038166460497933]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1]&#13;&#10;AND [date] = {FIXED[Calculation_404761081842511874]: MAX([date])}&#13;&#10;THEN [winner]&#13;&#10;END' />
+            </column>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_595038166460497933]' derivation='None' name='[none:Calculation_595038166460497933:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+            <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166460497933:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{1A5169C8-476A-44AC-85A9-65BC79FFBF57}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column caption='pionts1' datatype='integer' name='[Calculation_525795321225416708]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([winner])*2' />
+            </column>
+            <column caption='loss' datatype='integer' name='[Calculation_525795321226260486]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [team1] != [winner] &#13;&#10;THEN&#13;&#10;    1&#13;&#10;END' />
+            </column>
+            <column caption='cnt loss' datatype='integer' name='[Calculation_525795321226977287]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([Calculation_525795321226260486])' />
+            </column>
+            <column-instance column='[winner]' derivation='Count' name='[cnt:winner:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column caption='Team1' datatype='string' name='[team1]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_525795321225416708]' derivation='User' name='[usr:Calculation_525795321225416708:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_525795321226977287]' derivation='User' name='[usr:Calculation_525795321226977287:qk]' pivot='key' type='quantitative' />
+            <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:winner:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_525795321226977287:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_525795321225416708:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:winner:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+              <bucket>&quot;Royal Challengers Bengaluru&quot;</bucket>
+              <bucket>&quot;Lucknow Super Giants&quot;</bucket>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+              <bucket>&quot;Delhi Capitals&quot;</bucket>
+              <bucket>&quot;Punjab Kings&quot;</bucket>
+              <bucket>&quot;Gujarat Titans&quot;</bucket>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]'>
+            <groupfilter function='member' level='[yr:date:ok]' member='2024' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]</column>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:winner:nk]</rows>
+        <cols>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{6793B91F-A7EC-49C7-9F1D-EC8918EF6218}' />
+    </worksheet>
+    <worksheet name='Toatl Mtches'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column caption='Total  Matches' datatype='integer' name='[Calculation_404761081846767622]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [id]&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_404761081846767622]' derivation='Count' name='[cnt:Calculation_404761081846767622:qk]' pivot='key' type='quantitative' />
+            <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081846767622:qk]' value='n#,##0' />
+            <format attr='text-align' value='center' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#b4b4b4' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='22' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='24' />
+            <format attr='color' value='#0a31bd' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081846767622:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#082894'><![CDATA[<[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081846767622:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#333333' fontname='Tableau Bold' fontsize='14'>Total Matches Played</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CC286C3D-62EB-408C-BF7A-8A09F5AB2A1F}' />
+    </worksheet>
+    <worksheet name='Toss based di'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='14'>Toss Discision</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column caption='Toss based WINNER Select Year ' datatype='string' name='[Calculation_595038166449188869]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Calculation_404761081842511874] THEN [winner]&#13;&#10;END' />
+            </column>
+            <column caption='Toss based Discision Select Year' datatype='string' name='[Calculation_595038166450294792]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN &#13;&#10;    [toss_decision]&#13;&#10;END' />
+            </column>
+            <column caption='AVG(0)' datatype='real' name='[Calculation_595038166451654666]' role='measure' type='quantitative' user:unnamed='Toss based di'>
+              <calculation class='tableau' formula='AVG(0)' />
+            </column>
+            <column caption='AVG(0)' datatype='real' name='[Calculation_595038166451691532]' role='measure' type='quantitative' user:unnamed='Toss based di'>
+              <calculation class='tableau' formula='AVG(0)' />
+            </column>
+            <column-instance column='[Calculation_595038166449188869]' derivation='Count' name='[cnt:Calculation_595038166449188869:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_595038166450294792]' derivation='None' name='[none:Calculation_595038166450294792:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_595038166449188869]' derivation='Count' name='[pcto:cnt:Calculation_595038166449188869:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+            <column caption='Toss Decision' datatype='string' name='[toss_decision]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_595038166451654666]' derivation='User' name='[usr:Calculation_595038166451654666:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_595038166451691532]' derivation='User' name='[usr:Calculation_595038166451691532:qk]' pivot='key' type='quantitative' />
+            <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166450294792:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_595038166450294792:nk]' />
+              <groupfilter function='member' level='[none:Calculation_595038166450294792:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166450294792:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_595038166451691532:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_595038166451691532:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_595038166451654666:qk]' scope='cols' value='false' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='tick-color' field='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_595038166451654666:qk]' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ffffff' />
+            <format attr='border-width' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='11'><![CDATA[<[federated.1pz9wcl0wsa45b161n50p0kar7gb].[pcto:cnt:Calculation_595038166449188869:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='11'><![CDATA[<[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166450294792:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_595038166451654666:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166450294792:nk]' />
+              <size column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_595038166449188869:qk]' />
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166450294792:nk]' />
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[pcto:cnt:Calculation_595038166449188869:qk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='11'><![CDATA[<[federated.1pz9wcl0wsa45b161n50p0kar7gb].[pcto:cnt:Calculation_595038166449188869:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='11'><![CDATA[<[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166450294792:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='2.3314917087554932' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_595038166451691532:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.3733149766921997' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_595038166451654666:qk] + [federated.1pz9wcl0wsa45b161n50p0kar7gb].[usr:Calculation_595038166451691532:qk])</cols>
+      </table>
+      <simple-id uuid='{9F79E95D-CD25-4D11-836C-A3A1B691FF65}' />
+    </worksheet>
+    <worksheet name='Total TEAM Participated'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column aggregation='CountD' caption='Team Participated' datatype='string' default-role='measure' default-type='quantitative' name='[Calculation_404761081858416648]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1] THEN [team1]&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_404761081858416648]' derivation='CountD' name='[ctd:Calculation_404761081858416648:qk]' pivot='key' type='quantitative' />
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+            <column caption='Team1' datatype='string' name='[team1]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[ctd:Calculation_404761081858416648:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#082894' fontsize='24'><![CDATA[<[federated.1pz9wcl0wsa45b161n50p0kar7gb].[ctd:Calculation_404761081858416648:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#333333' fontname='Tableau Bold' fontsize='14'>Team Participated</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5F76BD62-0DAE-41F4-A4A5-E9FBE3C8D315}' />
+    </worksheet>
+    <worksheet name='Winner'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='matches' name='federated.1pz9wcl0wsa45b161n50p0kar7gb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+              <calculation class='tableau' formula='2024' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pz9wcl0wsa45b161n50p0kar7gb'>
+            <column aggregation='Sum' caption='Season Year' datatype='integer' name='[Calculation_404761081842511874]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='YEAR([season])' />
+            </column>
+            <column caption='Season Winner max' datatype='string' name='[Calculation_595038166460497933]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_404761081842511874] = [Parameters].[Parameter 1]&#13;&#10;AND [date] = {FIXED[Calculation_404761081842511874]: MAX([date])}&#13;&#10;THEN [winner]&#13;&#10;END' />
+            </column>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_595038166460497933]' derivation='None' name='[none:Calculation_595038166460497933:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='date' name='[season]' role='dimension' type='ordinal' />
+            <column aggregation='CountD' caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166460497933:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_595038166460497933:nk]' member='&quot;Chennai Super Kings&quot;' />
+              <groupfilter function='member' level='[none:Calculation_595038166460497933:nk]' member='&quot;Kolkata Knight Riders&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166460497933:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166460497933:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#082894' fontname='Tableau Bold' fontsize='20'><![CDATA[<[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166460497933:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#333333' fontname='Tableau Bold' fontsize='14'>Winner of Season</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='on' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{30C1C188-2F56-445E-9DB6-141A885AAF58}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style>
+        <_.fcp.IndividualControlFormatting.true...style-rule element='parameter-ctrl'>
+          <_.fcp.IndividualControlFormatting.true...format attr='font-family' field='[Parameters].[Parameter 1]' value='Tableau Bold' />
+          <_.fcp.IndividualControlFormatting.true...format attr='font-weight' field='[Parameters].[Parameter 1]' value='bold' />
+          <_.fcp.IndividualControlFormatting.true...format attr='font-size' field='[Parameters].[Parameter 1]' value='14' />
+        </_.fcp.IndividualControlFormatting.true...style-rule>
+        <_.fcp.IndividualControlFormatting.true...style-rule element='parameter-ctrl-title'>
+          <_.fcp.IndividualControlFormatting.true...format attr='text-align' field='[Parameters].[Parameter 1]' value='center' />
+          <_.fcp.IndividualControlFormatting.true...format attr='font-weight' field='[Parameters].[Parameter 1]' value='normal' />
+          <_.fcp.IndividualControlFormatting.true...format attr='font-size' field='[Parameters].[Parameter 1]' value='20' />
+        </_.fcp.IndividualControlFormatting.true...style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1155' minheight='800' minwidth='1155' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Year' datatype='integer' default-format='*0000' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+          <calculation class='tableau' formula='2024' />
+          <members>
+            <member value='2007' />
+            <member value='2009' />
+            <member value='2011' />
+            <member value='2012' />
+            <member value='2013' />
+            <member value='2014' />
+            <member value='2015' />
+            <member value='2016' />
+            <member value='2017' />
+            <member value='2018' />
+            <member value='2019' />
+            <member value='2021' />
+            <member value='2022' />
+            <member value='2023' />
+            <member value='2024' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='50' param='horz' type-v2='layout-flow' w='98614' x='693' y='1000'>
+            <zone h='98000' id='48' param='horz' type-v2='layout-flow' w='98614' x='693' y='1000'>
+              <zone h='98000' id='1' param='vert' type-v2='layout-flow' w='98614' x='693' y='1000'>
+                <zone fixed-size='69' friendly-name='Title' h='8625' id='5' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='97922' x='1039' y='1500'>
+                  <zone h='8625' id='6' param='horz' type-v2='layout-flow' w='97922' x='1039' y='1500'>
+                    <zone fixed-size='89' h='8625' id='38' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Dell/Downloads/e4f5c3ec6ed372eb6983a9b2d574cca5.png' type-v2='bitmap' w='8399' x='1039' y='1500'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone forceUpdate='true' h='8625' id='39' type-v2='text' w='71601' x='9438' y='1500'>
+                      <formatted-text>
+                        <run bold='true' fontcolor='#082894' fontname='Tableau Bold' fontsize='24'>INDIAN PREMIER LEAGUE | &lt;</run>
+                        <run bold='true' fontcolor='#082894' fontname='Tableau Bold' fontsize='24'>[Parameters].[Parameter 1]</run>
+                        <run bold='true' fontcolor='#082894' fontname='Tableau Bold' fontsize='24'>&gt;</run>
+                      </formatted-text>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone fixed-size='199' h='8625' id='45' is-fixed='true' type-v2='empty' w='17922' x='81039' y='1500'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+                <zone fixed-size='119' h='14875' id='21' is-fixed='true' type-v2='layout-basic' w='97922' x='1039' y='10125'>
+                  <zone friendly-name='KPI' h='14875' id='8' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='32291' x='1039' y='10125'>
+                    <zone h='14875' id='18' name='Toatl Mtches' w='32294' x='1039' y='10125'>
+                      <layout-cache cell-count-w='1' non-cell-size-w='1' type-h='cell' type-w='cell' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                  <zone h='14875' id='23' is-fixed='true' type-v2='layout-basic' w='65631' x='33330' y='10125'>
+                    <zone h='14875' id='27' is-fixed='true' type-v2='layout-basic' w='65631' x='33330' y='10125'>
+                      <zone friendly-name='KPI' h='14875' id='24' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='65631' x='33330' y='10125'>
+                        <zone h='14875' id='25' name='Winner' w='32814' x='33333' y='10125'>
+                          <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                        <zone h='14875' id='26' name='Total TEAM Participated' w='32814' x='66147' y='10125'>
+                          <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+                <zone fixed-size='275' friendly-name='Chart 1' h='34375' id='12' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='97922' x='1039' y='25000'>
+                  <zone fixed-size='461' h='34375' id='33' is-fixed='true' name='MOsr match WIN' w='32641' x='1039' y='25000'>
+                    <layout-cache cell-count-h='10' minwidth='180' non-cell-size-h='41' type-h='cell' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='34375' id='40' name='Sheet 11' w='32640' x='33680' y='25000'>
+                    <layout-cache cell-count-w='10' minheight='182' non-cell-size-w='1' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='34375' id='30' name='Toss based di' w='32641' x='66320' y='25000'>
+                    <layout-cache cell-count-h='1' minwidth='100' non-cell-size-h='41' type-h='cell' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone fixed-size='290' h='36250' id='35' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='97922' x='1039' y='59375'>
+                  <zone h='36250' id='37' name='Matches By City' w='49004' x='1039' y='59375'>
+                    <layout-cache minheight='242' minwidth='202' type-h='scalable' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='36250' id='46' name='AVG WIN Margin' w='48918' x='50043' y='59375'>
+                    <layout-cache cell-count-h='1' cell-count-w='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#f5f5f5' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone custom-title='true' h='3250' id='19' mode='compact' param='[Parameters].[Parameter 1]' show-title='false' type-v2='paramctrl' w='13853' x='82424' y='3625'>
+          <formatted-text>
+            <run fontcolor='#333333' fontname='Tableau Bold' fontsize='14'>Select Year</run>
+          </formatted-text>
+        </zone>
+        <zone fixed-size='35' forceUpdate='true' h='3500' id='44' is-fixed='true' type-v2='text' w='11948' x='83117' y='7375'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Tableau Bold' fontsize='14'>Select Season</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{BE4893EC-B399-4AF7-9639-F46EF52012B0}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{BB0A7711-E180-4913-8113-FB9E5D473825}' />
+    </window>
+    <window class='worksheet' name='Sheet 1 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{4E771964-095A-4EB5-8E6D-8EC78CD1A1B5}' />
+    </window>
+    <window class='worksheet' name='MOsr match WIN'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_595038166486904846:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{38C1BBA9-01B7-461A-ACDC-22AC2697A084}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[yr:date:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FB1AAD5D-F28B-4563-837B-3B9B48B341BB}' />
+    </window>
+    <window class='worksheet' name='Toatl Mtches'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{FA6462E8-6756-407B-822F-F1EA6A671706}' />
+    </window>
+    <window class='worksheet' name='Total TEAM Participated'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{C91E408E-882C-484E-8289-A1BBD2226B42}' />
+    </window>
+    <window class='worksheet' name='Matches By City'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081876127757:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_404761081876127757:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{E90A9D05-73D1-484A-A45A-BFD6ADCC1314}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='AVG WIN Margin'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='MOsr match WIN'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Matches By City'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 11'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Toatl Mtches'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Toss based di'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total TEAM Participated'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Winner'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{4C59013F-601A-4200-AD10-B74E1459D514}' />
+    </window>
+    <window class='worksheet' name='Toss based di'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_595038166449188869:qk]' type='size' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='1' param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[none:Calculation_595038166450294792:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{096B7D06-C6CC-4EAF-8607-213974CA1EA3}' />
+    </window>
+    <window class='worksheet' name='Winner'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{7F6DB7A6-35A1-46D5-AAC6-5ED1276BA8D0}' />
+    </window>
+    <window class='worksheet' name='AVG WIN Margin'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[avg:Calculation_360006561010102272:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{94037D4D-C907-49E1-9083-BAD535DED611}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1pz9wcl0wsa45b161n50p0kar7gb].[cnt:Calculation_322007439378124800:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B473959A-DD48-43FA-A4D8-A2DA624D68FD}' />
+    </window>
+    <window class='worksheet' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E86D5CD3-0047-492B-8303-F164BFFA03B1}' />
+    </window>
+  </windows>
+</workbook>
